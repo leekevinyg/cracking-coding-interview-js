@@ -7,8 +7,8 @@ Implement an function to determine if a string has all unique characters
 */
 
 const allUnique = (string) => {
-    let charactersEncounteredSoFar = [];
-    let stringArray = string.split('');
+    const stringArray = string.split('');
+    const charactersEncounteredSoFar = [];
 
     for (var character of stringArray) {
         if (!charactersEncounteredSoFar[character]) {
@@ -20,7 +20,22 @@ const allUnique = (string) => {
     return true;
 }
 
+/* 
+
+Question 1.2
+
+Reverse a string
+
+*/
+
+const reverse = (string) => {
+    if (string === '') {
+        return '';
+    }
+    return reverse(string.substr(1)) + string.charAt(0);
+}
 
 module.exports = {
     allUnique,
+    reverse,
 }
