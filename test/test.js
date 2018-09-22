@@ -1,16 +1,16 @@
-var expect = require('chai').expect;
-var allUnique = require('../question-1.1');
+let expect = require('chai').expect;
+let StringAndArrayFunctions = require('../array-and-strings');
 
 describe('stringIsAllUniqueCharacters', () => {
   it('should return true if string is empty', () => {
-    expect(allUnique('')).to.be.equal(true);
+    expect(StringAndArrayFunctions.allUnique('')).to.be.equal(true);
   });
   
   it('should return true if a string has all unique characters', () => {
-    expect(allUnique('helo')).to.be.equal(true);
+    expect(StringAndArrayFunctions.allUnique('helo')).to.be.equal(true);
   });
 
   it('should return false if a string has repeat characters', () => {
-    expect(allUnique('hello')).to.be.equal(false);
+    expect(StringAndArrayFunctions.allUnique('hello')).to.be.equal(false);
   });
 });
