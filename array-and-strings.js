@@ -28,14 +28,27 @@ Reverse a string
 
 */
 
-const reverse = (string) => {
+const recursiveReverse = (string) => {
     if (string === '') {
         return '';
     }
     return reverse(string.substr(1)) + string.charAt(0);
 }
 
+const reverse = (string) => {
+    let reversedStringSoFar = [];
+    let stringLength = string.length;
+
+    while (stringLength >= 0) {
+        reversedStringSoFar.push(string.charAt(stringLength));
+        stringLength--;
+    }
+
+    return reversedStringSoFar.join('');
+}
+
 module.exports = {
     allUnique,
+    recursiveReverse,
     reverse,
 }

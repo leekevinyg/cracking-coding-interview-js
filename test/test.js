@@ -15,6 +15,20 @@ describe('stringIsAllUniqueCharacters', () => {
   });
 });
 
+describe('recursive reverse', () => {
+  it('should return empty if string is empty', () => {
+    expect(StringAndArrayFunctions.recursiveReverse('')).to.be.equal('');
+  });
+
+  it('should reverse an odd number string', () => {
+    expect(StringAndArrayFunctions.recursiveReverse('hello')).to.be.equal('olleh');
+  });
+
+  it('should reverse an even number string', () => {
+    expect(StringAndArrayFunctions.recursiveReverse('fork')).to.be.equal('krof');
+  });
+});
+
 describe('reverse', () => {
   it('should return empty if string is empty', () => {
     expect(StringAndArrayFunctions.reverse('')).to.be.equal('');
