@@ -42,3 +42,33 @@ describe('reverse', () => {
     expect(StringAndArrayFunctions.reverse('fork')).to.be.equal('krof');
   });
 });
+
+describe('isPermutation - by sort', () => {
+  it('should return true if strings are empty', () => {
+    expect(StringAndArrayFunctions.isPermutationBySort('', '')).to.be.equal(true);
+  });
+  it('should return false if strings are not equal lengths', () => {
+    expect(StringAndArrayFunctions.isPermutationBySort('a', 'ab')).to.be.equal(false);
+  });
+  it('should return true if strings are permutations', () => {
+    expect(StringAndArrayFunctions.isPermutationBySort('dog', 'god')).to.be.equal(true);
+  });
+  it('should return false if strings are not permutations because of differing case', () => {
+    expect(StringAndArrayFunctions.isPermutationBySort('dog', 'God')).to.be.equal(false);
+  });
+});
+
+describe('isPermutation - by occurance of chars in strings', () => {
+  it('should return true if strings are empty', () => {
+    expect(StringAndArrayFunctions.isPermutationByOccuranceOfChars('', '')).to.be.equal(true);
+  });
+  it('should return false if strings are not equal lengths', () => {
+    expect(StringAndArrayFunctions.isPermutationByOccuranceOfChars('a', 'ab')).to.be.equal(false);
+  });
+  it('should return true if strings are permutations', () => {
+    expect(StringAndArrayFunctions.isPermutationByOccuranceOfChars('dog', 'god')).to.be.equal(true);
+  });
+  it('should return false if strings are not permutations because of differing case', () => {
+    expect(StringAndArrayFunctions.isPermutationByOccuranceOfChars('dog', 'God')).to.be.equal(false);
+  });
+});
