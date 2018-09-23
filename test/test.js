@@ -72,3 +72,15 @@ describe('isPermutation - by occurance of chars in strings', () => {
     expect(StringAndArrayFunctions.isPermutationByOccuranceOfChars('dog', 'God')).to.be.equal(false);
   });
 });
+
+describe('replaceSpaces', () => {
+  it('should return original string is empty', () => {
+    expect(StringAndArrayFunctions.replaceSpaces('')).to.be.equal('');
+  });
+  it('should return original string if no spaces', () => {
+    expect(StringAndArrayFunctions.replaceSpaces('test')).to.be.equal('test');
+  });
+  it('should replace spaces with %20', () => {
+    expect(StringAndArrayFunctions.replaceSpaces('Mr. Rogers')).to.be.equal('Mr.%20Rogers');
+  });
+});

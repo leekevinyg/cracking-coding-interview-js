@@ -7,10 +7,10 @@ Implement an function to determine if a string has all unique characters
 */
 
 const allUnique = (string) => {
-    const stringArray = string.split('');
+    const stringArray = Array.from(string);
     const charactersEncounteredSoFar = [];
 
-    for (var character of stringArray) {
+    for (let character of stringArray) {
         if (!charactersEncounteredSoFar[character]) {
               charactersEncounteredSoFar[character] = true;
         } else {
@@ -59,7 +59,7 @@ const isPermutationBySort = (str1, str2) => {
     if (str1.length !== str2.length) return false;
     if (str1 === '' && str2 === '') return true;
 
-    return str1.split('').sort().join('') === str2.split('').sort().join('');
+    return Array.from(str1).sort().join('') === Array.from(str2).sort().join('');
 }
 
 const isPermutationByOccuranceOfChars = (str1, str2) => {
@@ -90,10 +90,25 @@ const countOccuranceOfChars = (chars) => {
     return characterArray;
 }
 
+const replaceSpaces = (string) => {
+    if (string === '') return string;
+    const newStringArray = [];
+    for (let char of string) {
+        if (char === ' ') {
+            newStringArray.push('%20');
+        } else {
+            newStringArray.push(char);
+        }
+    }
+
+    return newStringArray.join('');
+}
+
 module.exports = {
     allUnique,
     recursiveReverse,
     reverse,
     isPermutationBySort,
     isPermutationByOccuranceOfChars,
+    replaceSpaces,
 }
