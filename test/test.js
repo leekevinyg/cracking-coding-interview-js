@@ -1,5 +1,5 @@
 let expect = require('chai').expect;
-let StringAndArrayFunctions = require('../array-and-strings');
+let StringAndArrayFunctions = require('../questions/array-and-strings');
 
 describe('stringIsAllUniqueCharacters', () => {
   it('should return true if string is empty', () => {
