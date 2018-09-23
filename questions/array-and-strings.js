@@ -2,7 +2,7 @@
 
 Question 1.1 
 
-Implement an function to determine if a string has all unique characters
+    Implement an function to determine if a string has all unique characters
 
 */
 
@@ -24,7 +24,7 @@ const allUnique = (string) => {
 
 Question 1.2
 
-Reverse a string
+    Reverse a string
 
 */
 
@@ -51,7 +51,7 @@ const reverse = (string) => {
 
 Question 1.3
 
-Given 2 strings, write a method to decide if one is permutation of the other
+    Given 2 strings, write a method to decide if one is permutation of the other
 
 */
 
@@ -90,6 +90,12 @@ const countOccuranceOfChars = (chars) => {
     return characterArray;
 }
 
+/* Question 1.4
+    
+    Write a method to replace all spaces in a string with '%20'
+
+*/
+
 const replaceSpaces = (string) => {
     if (string === '') return string;
     const newStringArray = [];
@@ -102,6 +108,17 @@ const replaceSpaces = (string) => {
     }
 
     return newStringArray.join('');
+}
+
+/* Question 1.5
+
+    Write a method to do basic string compression using counts of repeated chars
+    For example: aabcccaaa would become a2bc3a3.
+
+*/
+
+const compressString = (string) => {
+
 }
 
 module.exports = {
