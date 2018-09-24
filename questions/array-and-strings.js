@@ -118,7 +118,18 @@ const replaceSpaces = (string) => {
 */
 
 const compressString = (string) => {
+    let count = 0;
+    let output = '';
 
+    for (let i = 0; i < string.length; i++ ) {
+        count++;
+        if (string[i] !== string[i+1]) {
+            output += (count > 1 ? count : '') + string[i];
+            count = 0;
+        }
+    }
+
+    return output;
 }
 
 module.exports = {
@@ -128,4 +139,5 @@ module.exports = {
     isPermutationBySort,
     isPermutationByOccuranceOfChars,
     replaceSpaces,
+    compressString,
 }

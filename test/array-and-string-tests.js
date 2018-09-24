@@ -74,7 +74,7 @@ describe('isPermutation - by occurance of chars in strings', () => {
 });
 
 describe('replaceSpaces', () => {
-  it('should return original string is empty', () => {
+  it('should return original string if empty', () => {
     expect(StringAndArrayFunctions.replaceSpaces('')).to.be.equal('');
   });
   it('should return original string if no spaces', () => {
@@ -82,5 +82,17 @@ describe('replaceSpaces', () => {
   });
   it('should replace spaces with %20', () => {
     expect(StringAndArrayFunctions.replaceSpaces('Mr. Rogers')).to.be.equal('Mr.%20Rogers');
+  });
+});
+
+describe('compressString', () => {
+  it('should return original string if empty', () => {
+    expect(StringAndArrayFunctions.compressString('')).to.be.equal('');
+  });
+  it('should return compressed string', () => {
+    expect(StringAndArrayFunctions.compressString('aaa')).to.be.equal('3a');
+  })
+  it('should return compressed string', () => {
+    expect(StringAndArrayFunctions.compressString('teest')).to.be.equal('t2est');
   });
 });
