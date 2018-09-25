@@ -132,6 +132,12 @@ const compressString = (string) => {
     return output;
 }
 
+/* Question 1.6
+
+    Write a method to rotate a MxM matrix 90 degrees
+
+*/
+
 const rotateMatrix = (matrix) => {
     // todo
     return matrix;    
