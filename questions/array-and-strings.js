@@ -132,6 +132,11 @@ const compressString = (string) => {
     return output;
 }
 
+const rotateMatrix = (matrix) => {
+    // todo
+    return matrix;    
+}
+
 module.exports = {
     allUnique,
     recursiveReverse,
@@ -140,4 +145,5 @@ module.exports = {
     isPermutationByOccuranceOfChars,
     replaceSpaces,
     compressString,
+    rotateMatrix,
 }
