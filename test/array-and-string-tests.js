@@ -102,9 +102,9 @@ describe('rotateMatrix', () => {
     expect(StringAndArrayFunctions.rotateMatrix([
       [1, 2], 
       [3, 4]
-    ]).toString()).to.be.equal([
+    ])).to.be.equal([
       [3, 1], 
       [4, 2]
-    ].toString());
+    ]);
   });
 })
