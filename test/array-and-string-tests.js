@@ -96,17 +96,3 @@ describe('compressString', () => {
     expect(StringAndArrayFunctions.compressString('teest')).to.be.equal('t2est');
   });
 });
-
-describe('rotateMatrix', () => {
-  /*
-  it('should rotate a 2D MxM matrix 90 degrees', () => {
-    expect(StringAndArrayFunctions.rotateMatrix([
-      [1, 2], 
-      [3, 4]
-    ])).to.be.equal([
-      [3, 1], 
-      [4, 2]
-    ]);
-  });
-  */
-})
